@@ -40,6 +40,13 @@ I used Copilot Studio's built-in evaluation with 10 auto-generated multi-turn te
 - Some remaining "fails" are cases where the correct behaviour is to say *"I don't know – please contact HR"*. For an HR agent, not guessing is the intended design.
 - The classification judge cannot see the PDF, so it flagged correct contact details as "not grounded". I made the judge instructions more specific about what the FAQ contains.
 
+## Screenshots
+Published agent in Copilot Studio – the agent searches the HR FAQ, keeps the conversation context (user corrects "annual leave" to "sick leave"), uses today's date and answers with concrete steps:
+
+| Leave request – agent asks/assumes the leave type | Correction to sick leave – steps, portal path, eAU rule |
+|---|---|
+| ![Annual leave question](screenshots/01_annual_leave_question.png) | ![Sick leave answer](screenshots/02_sick_leave_answer.png) |
+
 ## Repository structure
 ```
 agent/        instructions.md            – agent instructions (system prompt)
