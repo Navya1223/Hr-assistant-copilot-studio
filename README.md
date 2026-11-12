@@ -16,6 +16,11 @@ An HR self-service agent built in **Microsoft Copilot Studio**. Employees ask HR
 | Safe refusal | "What does my colleague earn?" → no personal data, refers to HR |
 | Bilingual | Answers German questions in German |
 
+## Demo
+![HR Assistant demo](demo/hr_assistant_demo.gif)
+
+*Sped up 2.5×. An employee asks how to apply for sick leave; the agent searches the HR FAQ, explains the steps (inform the manager before 9:00, record the absence in the HR portal, doctor's certificate from day 3) and then drafts a Teams message to the manager with placeholders.* Full-length video (1:29): [demo/hr_assistant_demo.mp4](demo/hr_assistant_demo.mp4)
+
 ## How it is built
 - **Platform:** Microsoft Copilot Studio (own Microsoft 365 trial tenant, Dataverse environment)
 - **Knowledge source:** `knowledge/Employee_HR_FAQ.pdf` – 70 questions in 16 sections, each with full answers and alternative phrasings ("Also asked as") to improve retrieval
@@ -54,7 +59,8 @@ knowledge/    Employee_HR_FAQ.pdf        – knowledge source
               generate_faq.py            – script that generates the FAQ (LaTeX)
 evaluation/   HR_Assistant_Test_Questions.pdf – manual test questions with expected answers
               classification_instructions.md  – custom evaluation criteria
-screenshots/  evaluation results, test chat, Teams
+screenshots/  test chat screenshots
+demo/         demo video (MP4) and GIF preview
 ```
 
 ## Possible next steps
